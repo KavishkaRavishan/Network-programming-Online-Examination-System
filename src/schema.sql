@@ -45,7 +45,9 @@ CREATE TABLE IF NOT EXISTS student_answers (
 
 -- 6. Add sample data (for testing)
 -- Add sample users (1 student, 1 admin)
-INSERT INTO users (username, password, role) VALUES ('a1', 'a1', 'admin');
+INSERT INTO users (username, password, role) VALUES ('admin1', 'admin1', 'admin');
+INSERT INTO users (username, password, role) VALUES ('admin', 'admin', 'admin');
+
 INSERT INTO users (username, password, role) VALUES ('s1', 's1', 'student');
 
 -- Add a sample exam
