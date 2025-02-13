@@ -1,5 +1,4 @@
 package client;
-
 import client.ui.AdminUI;
 import client.ui.LoginUI;
 import client.ui.StudentUI;
