@@ -49,6 +49,7 @@ public class LoginUI extends JFrame {
         add(passwordField);
         add(loginButton);
 
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 

@@ -45,6 +45,18 @@ public class Client {
         adminUI = new AdminUI(this);
     }
 
+    public void logout() {
+        if (studentUI != null) {
+            studentUI.dispose();
+            studentUI = null;
+        }
+        if (adminUI != null) {
+            adminUI.dispose();
+            adminUI = null;
+        }
+        loginUI = new LoginUI(this);
+    }
+
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new Client());
     }
