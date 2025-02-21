@@ -15,33 +15,54 @@ An advanced **Online Exam System** built with **Java Swing (Client-side)** and *
 - Add and edit questions
 - View students' results
 
-### 📡 Server-Client Communication
+### 🎼 Server-Client Communication
 - Uses **Java Sockets** for communication
-- Handles multiple clients with **multithreading** 
+- Handles multiple clients with **multithreading**
 - Secure request-response model
 
-## 🏗️ Tech Stack
+## 🏷️ Tech Stack
 - **Java Swing** for GUI
 - **Java Socket Programming** for networking
-- **Multithreading** 
-- **JDBC / Database** 
+- **Multithreading**
+- **JDBC / Database**
 
 ## 💻 Installation & Setup
 
-### 1️⃣ Clone the Repository
+### 1⃣ Clone the Repository
 ```sh
 git clone https://github.com/yourusername/online-exam-system.git
 cd online-exam-system
 ```
 
-### 2️⃣ Start the Server
+### 2⃣ Configure the Database
+1. Open `DatabaseConfig.java` and update the following details:
+   ```java
+   String url = "jdbc:mysql://localhost:3306/online_exam_system";
+   String user = "root";
+   String password = "yourpassword";
+   ```
+2. Ensure you have created the `online_exam_system` database in MySQL.
+3. Import the required tables using the provided SQL script.
+
+### 3⃣ Download & Add MySQL Connector
+1. Download the **MySQL Connector/J** from:
+   [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
+2. Add the JAR file to the project:
+   - If using an IDE like **Eclipse** or **IntelliJ**, add it to the classpath.
+   - If compiling manually, include it using:
+     ```sh
+     javac -cp .:mysql-connector-java-x.x.x.jar *.java
+     java -cp .:mysql-connector-java-x.x.x.jar Server
+     ```
+
+### 4⃣ Start the Server
 Ensure the server is running on a machine with **a static local IP address**.
 ```sh
 javac Server.java
 java Server
 ```
 
-### 3️⃣ Run the Client
+### 5⃣ Run the Client
 On any machine within the same network:
 1. Update the client’s `connectToServer()` method in `Client.java`:
    ```java
@@ -67,7 +88,6 @@ On any machine within the same network:
 3. **Run the Client on Another PC**:
    - Ensure both computers are **connected to the same router**.
    - Run the client as mentioned earlier.
-
 
 ---
 **⭐ If you like this project, consider giving it a star on GitHub!**
