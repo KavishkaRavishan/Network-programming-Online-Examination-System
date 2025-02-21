@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO {
-
-    // Authenticate user
     public static boolean authenticateUser(String username, String password) {
         String query = "SELECT * FROM users WHERE username = ? AND password = ?";
 

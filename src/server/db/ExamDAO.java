@@ -83,4 +83,27 @@ public class ExamDAO {
             e.printStackTrace();
         }
     }
+
+    public static boolean addQuestion(String examName, String questionText, String optionA, String optionB, String optionC, String optionD, String correctOption) {
+        String query = "INSERT INTO questions (exam_id, question_text, option_a, option_b, option_c, option_d, correct_option) " +
+                "VALUES ((SELECT exam_id FROM exams WHERE exam_name = ?), ?, ?, ?, ?, ?, ?)";
+
+        try (Connection conn = DatabaseConfig.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, examName);
+            stmt.setString(2, questionText);
+            stmt.setString(3, optionA);
+            stmt.setString(4, optionB);
+            stmt.setString(5, optionC);
+            stmt.setString(6, optionD);
+            stmt.setString(7, correctOption);
+
+            int rowsInserted = stmt.executeUpdate();
+            return rowsInserted > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }

@@ -9,7 +9,6 @@ public class ClientHandler extends Thread {
     private Socket socket;
     private PrintWriter out;
     private BufferedReader in;
-
     public ClientHandler(Socket socket) {
         this.socket = socket;
     }

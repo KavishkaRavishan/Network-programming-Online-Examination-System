@@ -22,7 +22,7 @@ public class Client {
 
     private void connectToServer() {
         try {
-            socket = new Socket("localhost", 12345);
+            socket = new Socket("192.168.183.99", 12345);
             out = new PrintWriter(socket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         } catch (IOException e) {
@@ -55,7 +55,6 @@ public class Client {
         }
         loginUI = new LoginUI(this);
     }
-
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new Client());
     }
