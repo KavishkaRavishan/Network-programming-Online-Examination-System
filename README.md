@@ -68,19 +68,6 @@ On any machine within the same network:
    - Ensure both computers are **connected to the same router**.
    - Run the client as mentioned earlier.
 
-## 🛠️ How to Contribute
-1. **Fork the repo** and create a new branch:
-   ```sh
-   git checkout -b feature-new-improvement
-   ```
-2. **Make changes & commit**:
-   ```sh
-   git commit -m "Added new feature"
-   ```
-3. **Push & create a Pull Request**:
-   ```sh
-   git push origin feature-new-improvement
-   ```
 
 ---
 **⭐ If you like this project, consider giving it a star on GitHub!**
