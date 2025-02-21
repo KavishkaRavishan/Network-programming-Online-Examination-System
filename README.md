@@ -17,14 +17,14 @@ An advanced **Online Exam System** built with **Java Swing (Client-side)** and *
 
 ### 📡 Server-Client Communication
 - Uses **Java Sockets** for communication
-- Handles multiple clients with **multithreading** (if implemented in server)
+- Handles multiple clients with **multithreading** 
 - Secure request-response model
 
 ## 🏗️ Tech Stack
 - **Java Swing** for GUI
 - **Java Socket Programming** for networking
-- **Multithreading** (if enabled on the server)
-- **JDBC / Database** (if database integration is added)
+- **Multithreading** 
+- **JDBC / Database** 
 
 ## 💻 Installation & Setup
 
